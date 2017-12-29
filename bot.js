@@ -31,7 +31,7 @@ var datetime =  currentdate.getDate() + "/"
         // Do nothing if the channel wasn't found on this server
         if (!channel) return;
         
-        channel.send("test")
+        channel.send("test");
         //message.reply("hallo " + message.author.lastMessage.content + ",");
     }
 });
