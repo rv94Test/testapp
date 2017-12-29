@@ -25,6 +25,10 @@ var datetime =  currentdate.getDate() + "/"
     if(message.content === prefix+'hallo') {
         message.reply("hallo " + message.author.username + ",");
     }
+    
+    if(message.content === prefix+'last') {
+        message.reply("hallo " + message.author.lastMessage.content + ",");
+    }
 });
 
 // THIS  MUST  BE  THIS  WAY
