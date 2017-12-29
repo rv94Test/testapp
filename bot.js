@@ -23,7 +23,7 @@ var datetime =  currentdate.getDate() + "/"
     }
     
     if(message.content === prefix+'hallo') {
-        message.reply(message.channel + " hallo");
+        message.reply("hallo " + message.author.username + ",");
     }
 });
 
