@@ -6,7 +6,7 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    var prefix = "test.";
+    const prefix = "test.";
     if (message.content === prefix+'ping') {
     	message.reply('pong');
   	}
@@ -27,7 +27,12 @@ var datetime =  currentdate.getDate() + "/"
     }
     
     if(message.content === prefix+'last') {
-        message.reply("hallo " + message.author.lastMessage.content + ",");
+        const channel = member.guild.channels.find('name', 'member-log');
+        // Do nothing if the channel wasn't found on this server
+        if (!channel) return;
+        
+        channel.send("test")
+        //message.reply("hallo " + message.author.lastMessage.content + ",");
     }
 });
 
