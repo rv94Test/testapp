@@ -6,11 +6,12 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    if (message.content === 'ping') {
+    var prefix = "test.";
+    if (message.content === prefix+'ping') {
     	message.reply('pong');
   	}
     
-    if(message.content === 'time') {
+    if(message.content === prefix+'time') {
         var currentdate = new Date(); 
 var datetime =  currentdate.getDate() + "/"
                 + (currentdate.getMonth()+1)  + "/" 
@@ -20,11 +21,6 @@ var datetime =  currentdate.getDate() + "/"
                 + currentdate.getSeconds();
         message.reply(datetime);
     }
-    
-    if (message.content === 'what is my avatar') {
-    // Send the user's avatar URL
-    message.reply(message.author.avatarURL);
-  }
 });
 
 // THIS  MUST  BE  THIS  WAY
