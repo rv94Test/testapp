@@ -20,6 +20,11 @@ var datetime =  currentdate.getDate() + "/"
                 + currentdate.getSeconds();
         message.reply(datetime);
     }
+    
+    if (message.content === 'what is my avatar') {
+    // Send the user's avatar URL
+    message.reply(message.author.avatarURL);
+  }
 });
 
 // THIS  MUST  BE  THIS  WAY
