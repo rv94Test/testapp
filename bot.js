@@ -9,6 +9,17 @@ client.on('message', message => {
     if (message.content === 'ping') {
     	message.reply('pong');
   	}
+    
+    if(message.content === 'time') {
+        var currentdate = new Date(); 
+var datetime =  currentdate.getDate() + "/"
+                + (currentdate.getMonth()+1)  + "/" 
+                + currentdate.getFullYear() + " @ "  
+                + currentdate.getHours() + ":"  
+                + currentdate.getMinutes() + ":" 
+                + currentdate.getSeconds();
+        message.reply(datetime);
+    }
 });
 
 // THIS  MUST  BE  THIS  WAY
