@@ -21,6 +21,10 @@ var datetime =  currentdate.getDate() + "/"
                 + currentdate.getSeconds();
         message.reply(datetime);
     }
+    
+    if(message.content === prefix+'hallo') {
+        message.reply(message.channel + " hallo");
+    }
 });
 
 // THIS  MUST  BE  THIS  WAY
